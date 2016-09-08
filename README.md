@@ -6,12 +6,12 @@ _Updated to work on Unity3D `5.5.0b2`._
 
 [Unity3D][1] tutorial implementation for a procedural 2D, tile based game.
 
-This repository also follows [some][6] [known][2] [practices][3] for working with Unity3D projects alongside [Git][4] and [Travis CI][5]
+This repository also follows [some][6] [known][2] [practices][3] for working with Unity3D projects alongside [Git][4] and [Travis CI][5].
 
 ## Configuration
 Before you start coding, you might need to setup a few things in your local environment first.
 
-- Install and enable [Git Large File Storage][7] plugin (or `git lfs` for short). The `[.gitattributes](./.gitattributes)` file will direct Git to use LFS on multimedia assets.
+- Install and enable [Git Large File Storage][7] plugin (or `git lfs` for short). The [`.gitattributes`](./.gitattributes) file will direct Git to use LFS on multimedia assets, such as `*.aif` and `*.png` files.
 - Setup [UnityYAMLMerge][8] to work with Git by appending the following to your local `.git/config`:
 
 ```sh
