@@ -1,0 +1,31 @@
+language: objective-c
+osx_image: xcode8
+rvm:
+- 2.3.1
+branches:
+  only:
+  - master
+  - /^v?(\d\.){2}\d$/
+notifications:
+  email:
+  - nfantone@gmail.com
+before_install:
+- chmod a+x ./Scripts/install.sh
+- chmod a+x ./Scripts/build.sh
+install:
+- ./Scripts/install.sh
+script:
+- ./Scripts/build.sh
+deploy:
+  provider: s3
+  access_key_id: AKIAJEUR6LTPTGMIFDKA
+  secret_access_key:
+    secure: LNlAk4VMp/a6oGzAOW8beZs0SCXhua4+G/diI7Vu5Lp2ByC0t7nqmU5J5BSvJJWjsVdMMltommPpDeoGRfWBL8+CKfT1DCQt5UZqjzbk/XYPsRVU0pdMYvtxcoxaq4RppDeleODRUMRgJHBg0Bdga1IO4bJL/P0oc7bjLBYY9VbEq1PwolQN0QIUdVzc5/CQWHjfjdVoCZym1b5X+fwV7Ab1xFBf4RzXmeoIM7AhzMQim14rdmty2UzlscOAC/B+rYruRRZy496+50OPd5m7tP1KpK/XmSJ68ZzGgbHVdBOr1qX9xbO9pgEaD/pwHD+JfKXn7m0tQt/lcuYWVXe/AZpXrhUU1ofXDeVV7GzWpJskXRVE4e4errK1UaV5TuxAa6YDn/FTTfluQQBDM9ec5qUCtLJjxYITjUBmY4Sw9Parj6XZCjQSlWgWEO+2DX+RxaoN8tpbnaONxADoXitDdmSjGvOnfW0371XPfMIAZ1VakcnkNs1YrSHKC1/7zutt5VQqwJKO5/cRNUNrwcnFWqo5wSAKK0MxkN4HU2Xcs32R2W8KBJTko6wBqH0vRwWWxl1IxAlNEUUzXWIWxglq1lnoVZgpUaYP8Djg2lwYvPSkEHzhBz+10Xu8v/Y2jJO86zb5ThMO/cIo5tL2B41gzvMjyKcwGwMIYnBAPDY+NCA=
+  bucket: unity3d-builds
+  local-dir: Build
+  upload-dir: 2d-roguelike
+  skip_cleanup: true
+  acl: public_read
+  on:
+    repo: nfantone/2d-roguelike
+    tags: true
