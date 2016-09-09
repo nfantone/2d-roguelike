@@ -27,13 +27,13 @@ cmd = '/path/to/UnityYAMLMerge' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
 
 > Replace `/path/to/UnityYAMLMerge` with the actual local path to the tool.
 
-- Configure a local [Git hook to automatically remove empty directories][9] on post-merge.
+- (Optional) Configure a local [Git hook to automatically remove empty directories][9] on post-merge.
 
 ### Resources
-- Download latest version of [Git](https://git-scm.com/downloads) and [Git LFS](https://help.github.com/articles/installing-git-large-file-storage/)
-- Get [latest Unity3D](https://unity3d.com/unity/beta).
-- Go follow the [original tutorial](https://unity3d.com/learn/tutorials/projects/2d-roguelike-tutorial).
-- Download needed [free assets](https://www.assetstore.unity3d.com/en/#!/content/29825).
+- Download latest version of [Git][10] and [Git LFS][11]
+- Get [latest Unity3D][12].
+- Go follow the [original tutorial][13].
+- Download needed [free assets][14].
 
 ---
 
@@ -49,4 +49,8 @@ MIT
 [7]: https://git-lfs.github.com/
 [8]: http://docs.unity3d.com/Manual/SmartMerge.html
 [9]: https://github.com/strich/git-dir-cleaner-for-unity3d
-
+[10]: https://git-scm.com/downloads
+[11]: https://help.github.com/articles/installing-git-large-file-storage/
+[12]: https://unity3d.com/unity/beta
+[13]: https://unity3d.com/learn/tutorials/projects/2d-roguelike-tutorial
+[14]: https://www.assetstore.unity3d.com/en/#!/content/29825
