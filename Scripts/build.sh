@@ -7,9 +7,9 @@ echo "Attempting to build [$PROJECT] for Windows"
   -batchmode \
   -nographics \
   -silent-crashes \
-  -logFile $(pwd)/unity.log \
-  -projectPath $(pwd) \
-  -buildWindowsPlayer "$(pwd)/Build/windows/$PROJECT.exe" \
+  -logFile "unity.log" \
+  -projectPath "$(pwd)" \
+  -buildWindowsPlayer "Build/windows/$PROJECT.exe" \
   -quit
 
 echo "Attempting to build [$PROJECT] for OS X"
@@ -17,10 +17,10 @@ echo "Attempting to build [$PROJECT] for OS X"
   -batchmode \
   -nographics \
   -silent-crashes \
-  -logFile $(pwd)/unity.log \
-  -projectPath $(pwd) \
-  -buildOSXUniversalPlayer "$(pwd)/Build/osx/$PROJECT.app" \
+  -logFile "unity.log" \
+  -projectPath "$(pwd)" \
+  -buildOSXUniversalPlayer "Build/osx/$PROJECT.app" \
   -quit
 
 echo 'Showing logs from build'
-cat $(pwd)/unity.log
+cat unity.log
