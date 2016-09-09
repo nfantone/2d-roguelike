@@ -4,7 +4,6 @@ rvm:
 - 2.3.1
 branches:
   only:
-  - master
   - /^v?(\d\.){2}\d$/
 notifications:
   email:
@@ -19,7 +18,7 @@ before_script:
 install:
 - ./Scripts/install.sh
 script:
-- ./Scripts/build.sh
+- ./Scripts/build.sh "2d-roguelike-$TRAVIS_TAG"
 deploy:
   provider: s3
   access_key_id: AKIAJEUR6LTPTGMIFDKA
