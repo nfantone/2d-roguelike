@@ -2,7 +2,7 @@
 
 ![2D Roguelike](https://unity3d.com/sites/default/files/learn-playlist/icon/2droguelike-thumb1.jpg)
 
-_Updated to work on Unity3D `5.5.0b2`._
+_Updated to work on Unity3D `5.5.0b3`._
 
 [Unity3D][1] tutorial implementation for a procedural 2D, tile based game.
 
